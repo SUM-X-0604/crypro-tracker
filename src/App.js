@@ -4,6 +4,8 @@ import Coins from "./components/Coins";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from 'react-router-dom';
 import Coin from "./routes/Coin";
+import Footer from "./components/Footer";
+
 
 
 function App() {
@@ -31,7 +33,7 @@ function App() {
           <Route path=":coinId" element={<Coin />} />
         </Route>
       </Routes>
-
+      <Footer />
     </>
   );
 }
