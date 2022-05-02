@@ -22,8 +22,10 @@
 }
 
 .info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    justify-content: space-between;
 }
 
 .info .coin-heading {
@@ -35,7 +37,7 @@
 .info .coin-price {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
 }
 
 .info p {
@@ -52,7 +54,7 @@ td, th {
 }
 
 th {
-    background-color: #333;
+    background-color: rgb(123, 40, 40);
 }
 
 .stats {
