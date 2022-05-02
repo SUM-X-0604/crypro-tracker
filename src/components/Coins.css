@@ -31,9 +31,10 @@
 }
 
 .coin_row:hover {
-  transform: scale(0.9);
-  transition: 0.5s ease-in-out;
+  background: #6900ff;
   cursor: pointer;
+  transition: 1s ease-in-out;
+  /* transform: scale(1.1); */
 }
 
 img {

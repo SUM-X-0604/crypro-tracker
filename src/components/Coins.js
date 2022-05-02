@@ -4,7 +4,11 @@ import Coin from "../routes/Coin";
 import CoinItem from "./CoinItem";
 import "./Coins.css";
 
+
 const Coins = ({ coins }) => {
+
+
+
     return (
         <div className="container">
             <div>

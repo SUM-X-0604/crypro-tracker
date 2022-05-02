@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Coin.css";
 import DOMPurify from "dompurify";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Coin = () => {
     const [coin, setCoin] = useState({});
@@ -25,13 +27,17 @@ const Coin = () => {
             });
     }, []);
 
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     return (
         <div>
-            <div className='coin-container'>
+            <div data-aos="fade-left" className='coin-container'>
                 <div className='content'>
                     <h1>{coin.name}</h1>
                 </div>
-                <div className='content'>
+                <div data-aos="fade-right" className='content'>
                     <div className='rank'>
                         <span className='rank-btn'>Rank # {coin.market_cap_rank}</span>
                     </div>
@@ -99,7 +105,7 @@ const Coin = () => {
                     </div>
                 </div>
 
-                <div className='content'>
+                <div data-aos="fade-up-left" className='content'>
                     <div className='about'>
                         <h3>About</h3>
                         <p dangerouslySetInnerHTML={{

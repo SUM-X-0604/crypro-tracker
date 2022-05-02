@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Coins.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const CoinItem = ({ coins }) => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
-        <div className='coin_row'>
+
+        <div data-aos="fade-left" className='coin_row'>
             <p>{coins.market_cap_rank}</p>
             <div className='img_symbol'>
                 <img src={coins.image} alt="" />
